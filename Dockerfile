@@ -1,4 +1,4 @@
- FROM serversideup/php:8.5-fpm-alpine
+FROM serversideup/php:8.5-fpm-alpine
 
 USER root
 
