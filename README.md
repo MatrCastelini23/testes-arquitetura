@@ -1,5 +1,15 @@
 # Testes que sustentam a arquitetura
 
+| Duração | Conteúdo                                                       | Formato                    |
+|---------|----------------------------------------------------------------|----------------------------|
+| 15 min  | Abertura: Por que nossos testes falham em proteger o software? | Discussão + demonstração   |
+| 25 min  | Cobertura não é garantia de qualidade                          | Teoria + prática           |
+| 35 min  | Testando comportamentos, não implementações                    | Mão na massa               |
+| 10 min  | Intervalo                                                      | Pausa                      |
+| 35 min  | Test Doubles: Dummy, Stub, Spy, Mock e Fake                    | Teoria + exemplos práticos |
+| 45 min  | Criando um Repository In-Memory                                | Mão na massa               |
+| 15 min  | Desafio final e fechamento                                     | Exercício + discussão      |
+
 Dia 1
 1. Por que os testes deixam bug passar?
 ```php
