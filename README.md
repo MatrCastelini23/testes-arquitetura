@@ -1,5 +1,7 @@
 # Testes que sustentam a arquitetura
 
+Conteúdo dia 01:
+
 | Duração | Conteúdo                                                       | Formato                    |
 |---------|----------------------------------------------------------------|----------------------------|
 | 15 min  | Abertura: Por que nossos testes falham em proteger o software? | Discussão + demonstração   |
@@ -94,13 +96,14 @@ Solicite aos participantes que escrevam testes para:
 
 
 5. Dummy, Stub, Spy, Mock e Fake
-   | Tipo | Responsabilidade | Exemplo |
-   |---|---|---|
-   | Dummy | Preencher uma dependência que não será utilizada | Um objeto obrigatório no construtor |
-   | Stub | Fornecer respostas predefinidas | Simular o retorno de uma consulta |
-   | Spy | Registrar interações para posterior verificação | Registrar chamadas de envio de e-mail |
-   | Mock | Validar interações esperadas | Verificar uma chamada para um serviço externo |
-   | Fake | Oferecer uma implementação funcional simplificada | Repository In-Memory |
+6. 
+   | Tipo  | Responsabilidade                                  | Exemplo                                       |
+   |-------|---------------------------------------------------|-----------------------------------------------|
+   | Dummy | Preencher uma dependência que não será utilizada  | Um objeto obrigatório no construtor           |
+   | Stub  | Fornecer respostas predefinidas                   | Simular o retorno de uma consulta             |
+   | Spy   | Registrar interações para posterior verificação   | Registrar chamadas de envio de e-mail         |
+   | Mock  | Validar interações esperadas                      | Verificar uma chamada para um serviço externo |
+   | Fake  | Oferecer uma implementação funcional simplificada | Repository In-Memory                          |
 
 6. Repository In-Memory
 
