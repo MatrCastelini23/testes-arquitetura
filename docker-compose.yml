@@ -1,0 +1,10 @@
+services:
+  php:
+    build:
+      context: .
+      args:
+        USER_ID: 1000
+        GROUP_ID: 1000
+    working_dir: /var/www/html
+    volumes:
+      - .:/var/www/html
