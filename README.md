@@ -114,7 +114,8 @@ final class InMemoryOrderRepository implements OrderRepository
 
     public function save(Order $order): void
     {
-        $this->orders[] = $order;
+        $id = $order->id ?? count($this->orders) + 1;
+        $this->orders[$id] = $order;
     }
 
     public function findById(string $id): ?Order
@@ -131,9 +132,9 @@ final class InMemoryOrderRepository implements OrderRepository
 
 Aula 02
 
-1. Comportamento e refatoração
+1. Fake: Repository InMemory
 
-2. Fake: Repository InMemory
+2. Comportamento e refatoração
 
 3. Introdução ao Mutation Testing
 
