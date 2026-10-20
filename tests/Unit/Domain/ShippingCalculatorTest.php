@@ -1,6 +1,6 @@
 <?php
 
-namespace Unit;
+namespace Unit\Domain;
 
 use DifferDev\Domain\Entity\ShippingCalculator;
 use PHPUnit\Framework\Attributes\CoversClass;
