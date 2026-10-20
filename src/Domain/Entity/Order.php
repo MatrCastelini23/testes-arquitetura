@@ -2,8 +2,6 @@
 
 namespace DifferDev\Domain\Entity;
 
-use InvalidArgumentException;
-
 final class Order
 {
     private float $discount = 0.0;
@@ -12,26 +10,20 @@ final class Order
         private readonly array $items
     ) {
         if ($items === []) {
-            throw new InvalidArgumentException('Order must have items');
+            throw new \Exception('Order must have items');
         }
 
         foreach ($items as $index => $item) {
             if (!is_array($item)) {
-                throw new InvalidArgumentException(
-                    sprintf('Order item "%s" must be an array', $index)
-                );
+                throw new \Exception("Order item '$index' must be an array");
             }
 
             if (!array_key_exists('price', $item)) {
-                throw new InvalidArgumentException(
-                    sprintf('Order item "%s" must have a price', $index)
-                );
+                throw new \Exception("Order item '$index' must have a price");
             }
 
             if (!array_key_exists('quantity', $item)) {
-                throw new InvalidArgumentException(
-                    sprintf('Order item "%s" must have a quantity', $index)
-                );
+                throw new \Exception("Order item '$index' must have a quantity");
             }
 
             $price = $item['price'];
@@ -42,15 +34,11 @@ final class Order
                 || !is_finite((float) $price)
                 || $price < 0
             ) {
-                throw new InvalidArgumentException(
-                    sprintf('Order item "%s" must have a non-negative numeric price', $index)
-                );
+                throw new \Exception("Order item '$index' must have a non-negative numeric price");
             }
 
             if (!is_int($quantity) || $quantity < 1) {
-                throw new InvalidArgumentException(
-                    sprintf('Order item "%s" must have a positive integer quantity', $index)
-                );
+                throw new \Exception("Order item '$index' must have a positive integer quantity");
             }
         }
     }
@@ -64,5 +52,11 @@ final class Order
         }
 
         return $subtotal;
+    }
+
+    public function applyDiscount(float $param): float
+    {
+        $discountCalculator = new DiscountCalculator(0.10);
+        return $discountCalculator->calculate($param);
     }
 }

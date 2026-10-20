@@ -129,10 +129,9 @@ final class InMemoryOrderRepository implements OrderRepository
 
 --
 
-1. O problema dos Fakes
-2. Introdução aos Contract Tests
-3. Contract Tests na prática
-4. Introdução ao Mutation Testing
-5. Mutation Testing com Infection
-6. Protegendo a arquitetura
-7. Encerramento	Revisão e boas práticas
+1. Comportamento e refatoração
+2. Fake: Repository InMemory
+3. Introdução ao Mutation Testing
+4. Mutation Testing com Infection
+5. Protegendo a arquitetura
+6. Encerramento	Revisão e boas práticas
