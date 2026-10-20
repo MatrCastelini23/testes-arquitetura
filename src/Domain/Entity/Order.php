@@ -4,10 +4,12 @@ namespace DifferDev\Domain\Entity;
 
 final class Order
 {
+    public ?string $id = null;
+
     private float $discount = 0.0;
 
     public function __construct(
-        private readonly array $items
+        public readonly array $items,
     ) {
         if ($items === []) {
             throw new \Exception('Order must have items');

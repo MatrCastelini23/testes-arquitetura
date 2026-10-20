@@ -3,13 +3,13 @@
 namespace DifferDev\Application\Service;
 
 use DifferDev\Domain\Entity\Order;
-use DifferDev\Domain\Repository\OrderRepository;
+use DifferDev\Domain\Repository\OrderRepositoryInterface;
 use Exception;
 
-final class OrderService
+final readonly class OrderService
 {
     public function __construct(
-        private OrderRepository $orderRepository
+        private OrderRepositoryInterface $orderRepository
     ) {
     }
 
