@@ -1,17 +1,22 @@
 <?php
 
-namespace DifferDev;
+namespace DifferDev\Application\Service;
 
-final class OrderService
+use DifferDev\Domain\Entity\Order;
+use DifferDev\Domain\Repository\OrderRepositoryInterface;
+use Exception;
+
+final readonly class OrderService
 {
     public function __construct(
-        private OrderRepository $repository
-    ) {}
+        private OrderRepositoryInterface $orderRepository
+    ) {
+    }
 
     public function create(array $items): Order
     {
         if (empty($items)) {
-            throw new InvalidArgumentException(
+            throw new Exception(
                 'Order must have items'
             );
         }
@@ -22,7 +27,7 @@ final class OrderService
             $order->applyDiscount(0.10);
         }
 
-        $this->repository->save($order);
+        $this->orderRepository->save($order);
 
         return $order;
     }

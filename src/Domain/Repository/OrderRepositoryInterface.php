@@ -4,7 +4,7 @@ namespace DifferDev\Domain\Repository;
 
 use DifferDev\Domain\Entity\Order;
 
-interface OrderRepository
+interface OrderRepositoryInterface
 {
     public function save(Order $order): void;
 

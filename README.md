@@ -96,7 +96,7 @@ Solicite aos participantes que escrevam testes para:
 
 
 5. Dummy, Stub, Spy, Mock e Fake
-6. 
+
    | Tipo  | Responsabilidade                                  | Exemplo                                       |
    |-------|---------------------------------------------------|-----------------------------------------------|
    | Dummy | Preencher uma dependência que não será utilizada  | Um objeto obrigatório no construtor           |
@@ -114,7 +114,8 @@ final class InMemoryOrderRepository implements OrderRepository
 
     public function save(Order $order): void
     {
-        $this->orders[] = $order;
+        $id = $order->id ?? count($this->orders) + 1;
+        $this->orders[$id] = $order;
     }
 
     public function findById(string $id): ?Order
@@ -129,10 +130,16 @@ final class InMemoryOrderRepository implements OrderRepository
 
 --
 
-1. O problema dos Fakes
-2. Introdução aos Contract Tests
-3. Contract Tests na prática
-4. Introdução ao Mutation Testing
-5. Mutation Testing com Infection
-6. Protegendo a arquitetura
-7. Encerramento	Revisão e boas práticas
+Aula 02
+
+1. Fake: Repository InMemory
+
+2. Comportamento e refatoração
+
+3. Introdução ao Mutation Testing
+
+4. Mutation Testing com Infection
+
+5. Protegendo a arquitetura
+
+6. Encerramento	Revisão e boas práticas

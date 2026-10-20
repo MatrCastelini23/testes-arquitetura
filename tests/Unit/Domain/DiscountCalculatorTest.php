@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Unit;
+namespace Unit\Domain;
 
 use DifferDev\Domain\Entity\DiscountCalculator;
 use PHPUnit\Framework\Attributes\CoversClass;
